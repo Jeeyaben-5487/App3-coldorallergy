@@ -48,6 +48,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function coldAdd(){
             cold_count = cold_count + 1;
+		alert(cold_count);
         }
 
   </script>
@@ -98,12 +99,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content" class="w3-container">
         <p>Put Are your eyes watery or itchy?</p> 
 	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-	<a href="two" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a>
     	</div>
 
-// Question 1 and buttons added  
-
 </div>
+
+<script>//Attempt to add question 1 and buttons</script>
 
 	
 <div class="page" id="two">
@@ -113,13 +114,54 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p>Do you have a fever?</p>
-	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-	<a href="two" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
 	</div>
-
-// Question 2 and buttons added 
 	
 </div>	
+
+<script>//Attempt to add question 2 and buttons</script>
+
+<div class="page" id="three">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Put Do you have a sore throat?</p> 
+	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
+    	</div>
+
+</div>
+
+<script>//Attempt to add question 3 and buttons</script>
+	
+<div class="page" id="four">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Put Are your symptoms seasonal or chronic?</p> 
+	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
+	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+    	</div>
+
+</div>
+
+<script>//Attempt to add question 4 and buttons</script>
+
+<div class="page" id=results">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Results</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>"Probability it is allergies =" +allergyPercent + "<br> Probability it is a cold =" + coldPercent;</p> 
+	</div>	
+
+<script>//Attempt to add results page</script>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
