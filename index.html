@@ -97,7 +97,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Put Are your eyes watery or itchy?</p> 
+        <p>Are your eyes watery or itchy?</p> 
 	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
 	<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a>
     	</div>
@@ -130,7 +130,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Put Do you have a sore throat?</p> 
+        <p>Do you have a sore throat?</p> 
 	<a href="#four" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
 	<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
     	</div>
@@ -147,30 +147,43 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Put Are your symptoms seasonal or chronic?</p> 
-	<a href="#results" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-	<a href="#results" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        <p>Are your symptoms seasonal or chronic?</p> 
+	<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
+	<a href="#five" onclick="coldAdd();" class="w3-btn w3-black">No</a>
     	</div>
 
 </div>
 
 <script>//Attempt to add question 4 and buttons</script>
-<script>//Changed href=two to herf=results in attempt to transition from pages</script>
+<script>//Changed href=two to herf=five in attempt to transition from pages</script>
 
 
-<div class="page" id=results">
+<div class="page" id=five">
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Results</h1>
+		<h1>End of questionnaire</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>"Probability it is allergies =" +allergyPercent + "<br> Probability it is a cold =" + coldPercent;</p> 
+        <a href="#results" class="w3-btn w3-grey w3-round"> Click for results</a>
 	</div>	
 
-<script>//Attempt to add results page</script>
+<script>//Adding page after questions in attempt to get proper results page</script>
 
+<div class="page" id=results">
+	<div id= "header" class="w3-container w3-flat-carrot">
+		<h1>Cold or Allergies Results</h1>
+	</div>
+
+	<p id="results"></p>
+
+	<script>
+	document.getElementByld("results").innerHTML = "Probability it is allergies=" +allergyPercent + "<br> Probability it is a cold =" + coldPercent;	
+	</script>
+	
+<script>//Using JavaScript to change HTML Content for results page</script>
+	
 <footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+<p>DIY!</p>
 </footer>
 
 </body>
