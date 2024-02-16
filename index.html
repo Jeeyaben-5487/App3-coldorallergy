@@ -50,12 +50,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		//alert(cold_count); //removing alert box
 	}
 
-	function result(){	
-		var allergyPercent = (allergy_count/4) * 100; //adding var in front of code
-		var coldPercent = (cold_count/4) * 100; //adding var in front of code
-		var result= document.getElementId("result");
-		result.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%";
-     	}
+	function result(){
+		var allergyPercent = (allergy_count/4)*100; //adding var in front of percent code in attempt to get calcualtions 
+		var coldPercent = (cold_count/4)*100; //adding var in front of percent code in attempt to get calcualtions 
+		var result = document.getElementId("result");
+		result.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+	}
 
   </script>
 
@@ -165,17 +165,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>//Adding page after questions in attempt to get proper results page</script>
 <script>//Deleting all conect for page 5 and trying to readd because it was not working</script>
 
-
-<div class="page" id="five">
+<div class= "page" id=five">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>End of Questionnaire</h1>
 	</div>
-	
-    	<div id="content" class="w3-container">
-		<button onclick="result();"> Results </button>
-		<p id="result"></p>
-	</div>
 
+	<div id="content" class="w3-container">
+		<button class="w3-btn w3-black" onclick="result();"> Results </button>
+		<p id=result"></p>
+	</div>
 </div>
 
 	
