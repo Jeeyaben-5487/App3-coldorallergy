@@ -38,7 +38,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
         var allergy_count = 0;
         var cold_count = 0;
-	var resultText = document.getElementById("results");
+	//var resultText = document.getElementById("results");
 //Attempt to get results page
 
 
@@ -51,10 +51,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
 		//alert(cold_count); //removing alert box
-        }
+
+	function results(){	
+		var total = allergy_count + cold_count;
+		alert("allergy percentage:" + (allergy count/total) * 100 + "/coldpercentage:" + (cold_count/total) * 100);
+		var resultText= document.getElementId("results");
+		resultText.innerHTML = "Ptobability it is allergies =" + allergyPercentage + "<br> Probability it is a cold =" + coldPercent;
+     			}
 
   </script>
 
+<script>//Adding function/code for results in attempt to get results page</script>
 
 
 <style>	
@@ -155,20 +162,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 
 </div>
-
-<script>/*
-<div class="page" id="<five">
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>End of questionnaire</h1>
-	</div>
-
-	<div>
-        <a href="#six" class="w3-btn w3-grey w3-round">Click for results</a>
-	</div>
 	
-</div>	
 <script>//Adding page after questions in attempt to get proper results page</script>
-*/</script>
 <script>//Deleting all conect for page 5 and trying to readd because it was not working</script>
 
 	
@@ -177,12 +172,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<h1>End of Questionnaire</h1>
 	</div>
 	
-    	<div id="content" class="w3-container"></p> 
-	<a href="#six" class="w3-btn w3-black">Get Results</a>
-	</div>
+    	<div id="content" class="w3-container">
+	<a href="#five" class="w3-btn w3-black">results</a>
+	
 
 </div>
 
+	
 <script>/*
 <div class="page" id=six">
 	<div id= "header" class="w3-container w3-flat-carrot">
@@ -196,10 +192,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 		
 </div>
+/*</script>
 	
 <script>//Attempt to use JavaScript in order to change HTML Content for results page</script>
 <script>//Changing around some parts of the resultText.innerHTML commands, making two lines, quotes</script>
-*/</script>
+
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 <p>DIY!</p>
