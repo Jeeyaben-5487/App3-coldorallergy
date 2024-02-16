@@ -38,9 +38,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
         var allergy_count = 0;
         var cold_count = 0;
-	//var resultText = document.getElementById("results");
-//Attempt to get results page
-
+	var resultText = document.getElementById("results");
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
@@ -55,8 +53,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function percentage(){	
 		allergyPercent = (allergy_count/4) * 100
 		coldPercent = (cold_count/4) * 100
-		var result= document.getElementId("result")
-		result.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"
+		//var result= document.getElementId("result")
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"
      	}
 
   </script>
@@ -167,8 +165,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>//Adding page after questions in attempt to get proper results page</script>
 <script>//Deleting all conect for page 5 and trying to readd because it was not working</script>
 
-<script>/*	
-<div class="page" id="five">
+
+<div class"page" id="five">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>End of Questionnaire</h1>
 	</div>
@@ -179,24 +177,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 
 </div>
-*/</script>
-
-<div class= "page" id="five">
-	<div id="header" class="w3-container w3-falt-carrot">
-		<h1>End of Questionnaire</h1>
-	</div>
-
-	<div id="content" class="w3-container">
-		<button class="w3-btn w3-black" onclick="percentage()">Results</button>
-		<p id="result"></p>
-	</div>
-</div>
 
 	
 <script>//Attempt to use JavaScript in order to change HTML Content for results page</script>
 <script>//Changing around some parts of the resultText.innerHTML commands, making two lines, quotes</script>
 <script>//Adding a result button which will run a function to calculate the final percentage</script>
-<script>//Deleting page five again and rewriting</script>
 
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
