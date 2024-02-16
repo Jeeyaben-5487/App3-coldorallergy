@@ -52,11 +52,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
 		//alert(cold_count); //removing alert box
 
+	}
+
 	function results(){	
 		var total = allergy_count + cold_count;
 		alert("allergy percentage:" + (allergy count/total) * 100 + "/coldpercentage:" + (cold_count/total) * 100);
 		var resultText= document.getElementId("results");
-		resultText.innerHTML = "Ptobability it is allergies =" + allergyPercentage + "<br> Probability it is a cold =" + coldPercent;
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
      			}
 
   </script>
@@ -173,7 +175,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
+	<p>CLick below for results</p>
 	<a href="#five" class="w3-btn w3-black">results</a>
+	</div>
 	
 
 </div>
@@ -192,7 +196,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 		
 </div>
-/*</script>
+*/</script>
 	
 <script>//Attempt to use JavaScript in order to change HTML Content for results page</script>
 <script>//Changing around some parts of the resultText.innerHTML commands, making two lines, quotes</script>
