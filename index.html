@@ -150,32 +150,41 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Are your symptoms seasonal or chronic?</p> 
+	<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
+	<a href="#five" onclick="coldAdd();" class="w3-btn w3-black">No</a>
 	</div>
-	
-	<a href="#End of questionnarie" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
-	<a href="#End of questionnarie" onclick="coldAdd();" class="w3-btn w3-black">No</a>
 
-<div class="page" id="<End of questionnarie">
+</div>
+	
+<div class="page" id="<five">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>End of questionnaire</h1>
 	</div>
-	
-        <a href="#Cold or Allergies Results" class="w3-btn w3-grey w3-round">Click for results</a>
+
+	<div>
+        <a href="#six" class="w3-btn w3-grey w3-round">Click for results</a>
+	</div>
 	
 </div>	
 
 <script>//Adding page after questions in attempt to get proper results page</script>
 
-<div class="page" id=Cold or Allergies Results">
+<div class="page" id=six">
 	<div id= "header" class="w3-container w3-flat-carrot">
 		<h1>Cold or Allergies Results</h1>
 	</div>
 
+	<div>
 	<p id="results"></p>
-
-	<p>resultText.innerHTML = "Probability it is allergies=" +allergyPercent + " <br> Probability it is a cold =" + coldPercent;</p>
+	<p resultText.innerHTML = "Probability it is allergies =" + allergyPercent;></p>
+	<p resultText.innerHTML = "Probability it is cold =" + coldPercent;></p>
+	</div>
+		
+</div>
 	
-<script>//Using JavaScript to change HTML Content for results page</script>
+<script>//Attempt to use JavaScript in order to change HTML Content for results page</script>
+<script>//Changing around some parts of the resultText.innerHTML commands, making two lines, quotes</script>
+
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 <p>DIY!</p>
