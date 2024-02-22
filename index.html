@@ -7,8 +7,8 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
- 
+Jeeyaben Bhakta
+	
 Further Information:
 http://cns.utexas.edu/fri
  
@@ -17,11 +17,16 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
- 
+This code utlizes JavaScript, CSS, and HTML to create a web-based diagnostic tool. 
+When a user accesses the link for this app, they will be presented with 6 "yes" and "no" questions asking about their symptoms. 
+The responses of the users will be recorded and at the end a percentage of cold or allergy will be calculated. 
+This code is not meant to diagnose any condition and should not be used to do that. 
+	
 Known Issues:
-blah, blah, blah, blah
+The length of the questionnaire too short, and the questions themselves are not descriptive enough. 
+A percentage is given as a resuls but no addition information is provided which can make the results confusing. 
 
+	
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -43,16 +48,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 		//alert(allergy_count); //removing alert box
+		//allergy count is increased by 1 whenever function is activated
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
 		//alert(cold_count); //removing alert box
+		//cold count is increased by 1 whenever function is activated
+
 	}
 
 	function result(){
-		var allergyPercent = (allergy_count/6)*100; //adding var in front of percent code in attempt to get calcualtions 
-		var coldPercent = (cold_count/6)*100; //adding var in front of percent code in attempt to get calcualtions 
+		var allergyPercent = (allergy_count/6)*100; //adding var in front of percent code in attempt to get calcualtions //adding equation to convert allergy count to percent
+		var coldPercent = (cold_count/6)*100; //adding var in front of percent code in attempt to get calcualtions //adding equation to convert cold count to percent
 		var result = document.getElementById("seven");
 		result.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
 	}
@@ -62,8 +70,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>//Adding function/code for results in attempt to get results page</script>
 <script>//Addding numbers to function to get results</script>
 <script>//Fixed ElementId to ElementById</script>
-<script>//Fixed getElementById("results") to ("seven") to get results</script>
+<script>//Fixed getElementById("results") to ("seven") to get results --> matching the variable titiles</script>
 
+	
+<!--Code for pages-->
 
 
 <style>	
@@ -88,6 +98,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 }
 </style>
 
+<!--Beginning of questionnaire-->
+	
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Cold or Allergies?</h1>
@@ -102,6 +114,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
+<!--Start of page 1 and question 1-->
+
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
@@ -109,14 +123,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Are your eyes watery or itchy?</p> 
-	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-green">Yes</a>
+	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-green">Yes</a> 
 	<a href="#two" onclick="coldAdd();" class="w3-btn w3-red">No</a>
     	</div>
 
 </div>
 
-<script>//Attempt to add question 1 and buttons</script>
+<script>//Adding question 1 and buttons</script>
+<script>//When clicked: first button adds to allergy and second adds to cold</script>
 
+
+<!--End of page 1 and question 1-->
+
+<!--Start of page 2 and question 2-->
 	
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
@@ -132,7 +151,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>	
 
 <script>//Attempt to add question 2 and buttons</script>
+<script>//When clicked: first button adds to cold and second adds to allergy</script>
 <script>//Changed href=two to herf=three in attempt to transition from pages</script>
+
+
+<!--End of page 2 and question 2-->
+
+<!--Start of page 3 and question 3-->
 
 
 <div class="page" id="three">
@@ -148,9 +173,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 </div>
 
-<script>//Attempt to add question 3 and buttons</script>
+<script>//Add question 3 and buttons</script>
+<script>//When clicked: first button adds to cold and second adds to allergy</script>
 <script>//Changed href=two to herf=four in attempt to transition from pages</script>
 
+<!--End of page 3 and question 3-->
+	
+<!--Start of page 4 and question 4-->
 	
 <div class="page" id="four">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -159,14 +188,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Are your symptoms seasonal or chronic?</p> 
-	<a href="#five" onclick="allergyAdd();" class="w3-btn w3-green">Yes</a>
+	<a href="#five" onclick="allergyAdd();" class="w3-btn w3-green">Yes</a> 
 	<a href="#five" onclick="coldAdd();" class="w3-btn w3-red">No</a>
 	</div>
 
 </div>
 	
-<script>//Adding page after questions in attempt to get proper results page</script>
+<script>//Adding question 4 and buttons</script>
+<script>//When clicked: first button adds to allergy and second adds to cold</script>
 <script>//Deleting all conect for page 5 and trying to readd because it was not working</script>
+
+<!--End of page 4 and question 4-->
+	
+<!--Start of page 5 and question 5-->
 
 <div class="page" id="five">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -181,7 +215,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 </div>
 
-<script>//Adding extra allergy question</script>
+<script>//Adding extra allergy question and buttons</script>
+<script>//When clicked: first button adds to allergy and second adds to cold</script>
+
+
+<!--End of page 5 and question 5-->
+	
+<!--Start of page 6 and question 6-->
 
 <div class="page" id="six">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -196,7 +236,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 </div>
 
-<script>//Adding extra cold question</script>
+<script>//Adding extra cold question and buttons</script>
+<script>//When clicked: first button adds to cold and second adds to allergy</script>
+
+<!--End of page 6 and question 6-->
+	
+<!--Start of page 7 and results page-->
+
+<!--End of questionnaire and leading to results page-->
+
 
 <div class= "page" id="seven">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -212,8 +260,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <script>//Attempt to use JavaScript in order to change HTML Content for results page</script>
 <script>//Changing around some parts of the resultText.innerHTML commands, making two lines, quotes</script>
+<script>//Changing p id to "result" to match variables</script>
 <script>//Adding a result button which will run a function to calculate the final percentage</script>
 
+<!--End of code for results page and code-->
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
